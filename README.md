@@ -29,29 +29,49 @@ https://grpc.io/
 ## Reflection
 
 - https://github.com/grpc/grpc-go/tree/master/reflection
+
 - https://github.com/ktr0731/evans
+
 Command line:
+
 go get github.com/ktr0731/evans
+
 evans -p 50051 -r
+
 show package
+
 show service
+
 show message
+
 desc SumRequest
+
 package calculator
+
 service CalculatorService
+
 call Sum
 
 ## mongoDB
 
 - https://github.com/mongodb/homebrew-brew
+
 brew tap mongodb/brew
+
 brew install mongodb-community
+
 brew services start mongodb-community
+
 mkdir database/data/db
+
 mongod --dbpath database/data/db
+
 - Interface for mongoDB - Robo 3T
+
 https://robomongo.org/download
+
 - driver
+
 go get go.mongodb.org/mongo-driver/mongo
 
 ## Real world example
@@ -72,6 +92,7 @@ Third party with extra performance.
 ## Run blog
 
 - local
+
 export Environment=local
 
 go run blog/blog_server/*.go 
@@ -81,7 +102,9 @@ go run blog/blog_client/client.go
 evans -p 50051 -r
 
 - with TLS
+
 export Environment=somethingElse
 
 go run blog/blog_server/*.go 
+
 evans -p 50051 -r --tls --host=localhost --cacert ssl/ca.crt  
